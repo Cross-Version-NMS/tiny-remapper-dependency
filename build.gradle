@@ -24,9 +24,10 @@ repositories {
 dependencies {
 	api 'org.ow2.asm:asm:9.6'
 	api 'org.ow2.asm:asm-commons:9.6'
-	implementation 'org.ow2.asm:asm-tree:9.6'
-	implementation 'org.ow2.asm:asm-util:9.6'
 	implementation "net.fabricmc:mapping-io:0.5.0"
+
+	compileOnly 'org.ow2.asm:asm-tree:9.6'
+	compileOnly 'org.ow2.asm:asm-util:9.6'
 
 	testImplementation 'org.junit.jupiter:junit-jupiter:5.6.2'
 }
