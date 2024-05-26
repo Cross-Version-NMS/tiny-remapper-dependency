@@ -47,7 +47,9 @@ tasks.withType(JavaCompile).configureEach {
 }
 
 shadowJar {
-	archiveClassifier = 'fat'
+	archiveClassifier = ''
+
+	relocate 'org.objectweb.asm', 'io.github.cvn.asm'
 }
 
 test {
